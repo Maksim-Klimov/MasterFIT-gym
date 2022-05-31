@@ -1,0 +1,46 @@
+.contacts {
+  @include bg-cover;
+
+  padding: 99px 0;
+  background-image: url(../../img/background/bg_06.jpg);
+
+  @include high-desktop {
+    padding: 10px 0;
+  }
+
+  // .contacts__content
+
+  &__content {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+
+  // .contacts__title
+
+  &__title {
+    text-align: center;
+  }
+
+  // .contacts__description
+
+  &__description {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__policy {
+    margin: 0 auto;
+    max-width: 350px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__link {
+    color: var(--red-color);
+    border-bottom: 1px dotted;
+  }
+
+  .form {
+    margin: 0 auto;
+  }
+}

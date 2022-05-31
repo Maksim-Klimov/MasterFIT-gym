@@ -1,0 +1,40 @@
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-family-other);
+  font-size: 5.7rem;
+  color: var(--text-color);
+  margin-bottom: 2.1rem;
+
+  @include mobile {
+    font-size: 5rem;
+  }
+
+  @include mobile-L {
+    font-size: 3rem;
+  }
+}
+
+.btn {
+  @include flex-all-center;
+
+  font-size: 1.7rem;
+  font-weight: 600;
+  background-color: var(--red-color);
+}
+
+.section-offset {
+  padding: 60px 0 60px;
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  @include high-tablet {
+    padding: 20px 0;
+  }
+}

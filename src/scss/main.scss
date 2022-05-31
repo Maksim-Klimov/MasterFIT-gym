@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "defaulStyle";
+@import "media";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/home";
+@import "./components/our-programs";
+@import "./components/gym";
+@import "./components/form";
+@import "./components/pay-aboniment";
+@import "./components/club-cart";
+@import "./components/contacts-form";
+@import "./components/contacts";
+@import "./components/footer";

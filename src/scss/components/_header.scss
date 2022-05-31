@@ -1,0 +1,158 @@
+.header {
+  padding: 50px 0 35px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__content {
+    @include flex-all-sb;
+
+    // overflow: hidden;
+  }
+
+  @include mobile {
+    padding: 15px 0;
+  }
+}
+
+.logo {
+  position: relative;
+  font-family: var(--font-family-other);
+  color: var(--text-color);
+  font-size: 3.86rem;
+  transition: color .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  span {
+    color: var(--red-color);
+  }
+
+  @include hover {
+    & {
+      color: var(--red-color);
+    }
+
+    span {
+      color: var(--text-color);
+    }
+  }
+}
+
+.nav {
+  overflow: hidden;
+  padding: 0 .5rem;
+
+  // .nav__list
+
+  &__list {
+    @include flex-all-center;
+
+    position: relative;
+
+    @include high-tablet {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  // .nav__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 3rem;
+      @include high-tablet {
+        margin-right: 0;
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+
+  // .nav__link
+
+  &__link {
+    color: var(--text-color);
+    transition: color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    @include hover {
+      color: var(--text-color-light);
+    }
+
+    @include high-tablet {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+  }
+
+  @include high-tablet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    transition: .5s cubic-bezier(.175,.885,.32,1.275);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.phone {
+  @include flex-all-center;
+
+  font-weight: 600;
+  font-size: 1.8rem;
+  transition: color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  span {
+    font-size: 2.1rem;
+    margin-right: 0.4rem;
+  }
+
+  // .phone__link
+
+  &__link {
+    color: var(--text-color);
+  }
+
+  // .phone__svg
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-right: 0.5rem;
+  }
+
+  @include hover {
+    &:hover .phone__link {
+      color: var(--text-color-light);
+    }
+
+    &:hover .phone__svg {
+      color: var(--text-color-light);
+    }
+  }
+
+  @include mobile {
+    display: none
+  }
+}
+
+
+.burger {
+  @include burger-2;
+
+  display: none;
+
+  @include high-tablet {
+    display: flex;
+  }
+}

@@ -1,0 +1,45 @@
+.pay-ab {
+  @include bg-cover;
+
+  padding-top: 122px;
+  background-image: url(../../img/background/bg_04.jpg);
+
+  @include mobile {
+    padding-top: 50px;
+  }
+
+  // .pay-ab__title
+
+  &__title {
+    max-width: 450px;
+  }
+
+  // .pay-ab__description
+
+  &__description {
+    max-width: 450px;
+    margin-bottom: 5rem;
+
+  }
+
+  // .pay-ab__form
+
+  &__form {
+    position: relative;
+  }
+
+  // .pay-ab__policy
+
+  &__policy {
+    max-width: 350px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  // .pay-ab__link
+
+  &__link {
+    color: var(--red-color);
+    border-bottom: 1px dotted;
+  }
+}

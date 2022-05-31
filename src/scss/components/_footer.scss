@@ -1,0 +1,48 @@
+.footer {
+  position: relative;
+  padding: 40px 0;
+  background-color: hsl(224deg 35% 8%);;
+
+  // .footer__container
+
+  &__container {
+    @include flex-all-sb;
+
+    margin-bottom: 3.5rem;
+
+    @include mobile {
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+    // .footer__copyright
+
+    &__copyright {
+      @include flex-all-sb;
+
+      color: var(--text-color);
+      font-size: 1.4rem;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    // .footer__copy
+
+    &__copy {
+      @include mobile {
+        margin-bottom: 1rem;
+      }
+    }
+
+    // .footer__link
+
+    &__link {
+      transition: color .3s ease-in-out;
+      @include hover {
+        color: var(--text-color-light);
+      }
+    }
+}

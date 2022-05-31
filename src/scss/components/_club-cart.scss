@@ -1,0 +1,199 @@
+.club-cart {
+  @include bg-cover;
+
+  padding: 96px 0;
+  background-image: url(../../img/background/bg_05.jpg);
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  // .club-cart__title
+
+  &__title {
+    max-width: 450px;
+  }
+
+  // .club-cart__description
+
+  &__description {
+    max-width: 450px;
+    margin-bottom: 4rem;
+  }
+
+  // .club-cart__content
+
+  &__content {
+    position: relative;
+  }
+
+  // .club-cart__container
+
+  &__container {
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+
+    @include small-tablet {
+      height: 100%;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  // .club-cart__window
+
+  &__window {
+    grid-column: 9 span;
+    // height: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    @include high-desktop {
+      grid-column: 8 span;
+    }
+
+    @include small-tablet {
+      grid-column: span 6;
+      order: 2;
+    }
+  }
+
+  // .club-cart__window-item
+
+  &__window-item {
+    @include bg-cover;
+
+    background-image: url(../../img/background/bg-cart.jpg);
+    background-color: hsla(221, 15%, 26%, .4);
+    padding: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &_active {
+      padding: 70px 40px;
+      height: 100%;
+      opacity: 1;
+      visibility: visible;
+
+      @include tablet {
+        padding: 50px 15px;
+      }
+
+      @include small-tablet {
+        padding: 20px;
+        height: auto;
+      }
+    }
+  }
+
+  // .club-cart__top-block
+
+  &__top-block {
+    @include flex-all-sb;
+
+    margin-bottom: 2.1rem;
+
+    @include high-tablet {
+      flex-direction: column;
+    }
+  }
+
+  // .club-cart__w-title
+
+  &__w-title {
+    @include high-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  // .club-cart__w-description
+
+  &__w-description {
+    color: var(--text-color-light);
+  }
+
+  // .club-cart__w-liss
+
+  &__w-liss {
+    @include flex-all-sb;
+
+  }
+
+  // .club-cart__w-list-block
+
+  &__w-list-block {
+    max-width: 350px;
+  }
+
+  // .club-cart__w-item
+
+  &__w-item {
+    font-weight: 600;
+    font-size: 1.8rem;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .club-cart__nav
+
+  &__nav {
+    grid-column: 3 span;
+
+    @include high-desktop {
+      grid-column: 4 span;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+  }
+
+  // .club-cart__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  // .club-cart__item
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    font-family: var(--font-family-other);
+    color: var(--text-color-light);
+    font-size: 3.5rem;
+    padding: 3.5rem 4rem;
+    background-color: hsla(221, 15%, 26%, .4);
+    text-align: center;
+    border-radius: 1rem;
+
+    &_active {
+      position: relative;
+      background-color: hsla(4, 100%, 61%, .7);
+      color: var(--text-color);
+      overflow: hidden;
+    }
+
+    @include big-desktop {
+      font-size: 3.4rem;
+    }
+
+    @include high-tablet {
+      font-size: 2.7rem;
+      padding: 4rem 2rem;
+    }
+
+    @include small-tablet {
+      margin-bottom: 1.2rem;
+      padding: 2rem;
+    }
+  }
+}

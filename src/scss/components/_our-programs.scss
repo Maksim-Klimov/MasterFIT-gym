@@ -1,0 +1,151 @@
+.our-programs {
+  @include bg-cover;
+
+  padding-top: 267px;
+  position: relative;
+  background-image: url(../../img/background/bg_02.webp);
+
+  @include mobile-L {
+    padding-top: 200px;
+  }
+
+  // .our-programs__title
+
+  &__title {
+    font-family: var(--font-family-other);
+  }
+
+  // .our-programs__block-descr
+
+  &__block-descr {
+    @include flex-all-sb;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  // .our-programs__description
+
+  &__description {
+    max-width: 450px;
+    margin-bottom: 4.5rem;
+
+    @include small-tablet {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    @include mobile {
+      margin-bottom: 2rem;
+    }
+  }
+
+
+  // .our-programs__slides
+
+  &__slides {
+    @include flex-all-center;
+
+    padding-right: 7rem;
+    max-width: 450px;
+    color: var(--text-color-light);
+
+    @include high-tablet {
+      padding-right: 0;
+      max-width: 350px;
+    }
+
+    @include small-tablet {
+      max-width: 100%;
+      margin-bottom: 2rem;
+
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+
+  // .our-programs__svg-icon
+
+  &__svg-icon {
+    margin-right: 2rem;
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+  }
+
+  // .our-programms__content
+
+  &__content {
+    padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+  }
+
+  // .our-programs__swiper
+
+  &__swiper {
+    position: relative;
+  }
+
+  // .our-programs__item
+
+  &__item {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    min-height: 360px;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--red-color-light);
+    }
+
+    @include mobile-L {
+      min-height: 320px;
+    }
+  }
+
+
+  &__swiper-title {
+    font-family: var(--font-family-other);
+    position: relative;
+    z-index: 99;
+  }
+
+  // .our-programs__image
+
+  &__image {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // border-radius: 1rem;
+    width: 100%;
+    height: 360px;
+  }
+
+  .swiper-slide {
+    width: 540px;
+    @include small-tablet {
+      width: 450px;
+    }
+
+    @include mobile {
+      width: 300px;
+    }
+  }
+}
