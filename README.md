@@ -37,3 +37,6 @@
 └── .stylelintrc                  # файл с настройками stylelint
 └── README.md                     # документация сборки
 ```
+
+## Full page screen
+![MasterFIT](https://i.ibb.co/sRT0jht/masterfit.png)
